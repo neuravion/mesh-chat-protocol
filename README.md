@@ -5,7 +5,7 @@ Chat protocol for secure communication over a mesh network over the internet.
 ## Clients
 
 [Spiced Gracken](https://github.com/NullVoxPopuli/spiced_gracken) (ruby gem)  
-[Pyna Collada](https://github.com/etkirsch/pyna-collada) (python)
+[PyÑa Colada](https://github.com/etkirsch/pyna-colada) (python)
 
 ## Internal Protocol
 Each message will be a serialized (to JSON) hash.

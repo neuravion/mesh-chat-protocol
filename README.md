@@ -28,20 +28,20 @@ A recieving client deserializes the JSONized hash, and can do whatever with it.
 #### Message
 The `message` field in the hash is of variable type. Its type is determined by the `type` field as follows.
 
- * **Chat**: A string containing the message body
- * **Whisper**: A string containing the message body
- * **Connect**: A json object containing the identifier for the connecting party and a hash of all of its authorized servers
- * **Disconnect**: Unused
- * **Authorization**: Milestone 2
+ * **chat**: A string containing the message body
+ * **whisper**: A string containing the message body
+ * **connect**: A json object containing the identifier for the connecting party and a hash of all of its authorized servers
+ * **disconnect**: Unused
+ * **authorization**: Milestone 2
 
 ## Message Types
 There are various types of messages used by Rum. They each have various functionalities as described below.
 
-* **Chat**: A message broadcast to all of a client's active servers
-* **Whisper**: A message broadcast to a single active server, e.g. `@evan hello`
-* **Connect**: Informs all authorized servers that this client/server pair has come online
-* **Disconnect**: Informs all active servers that this client has gone offline
-* **Authorization**: Milestone 2
+* **chat**: A message broadcast to all of a client's active servers
+* **whisper**: A message broadcast to a single active server, e.g. `@evan hello`
+* **connect**: Informs all authorized servers that this client/server pair has come online
+* **disconnect**: Informs all active servers that this client has gone offline
+* **authorization**: Milestone 2
 
 ## Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.

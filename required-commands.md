@@ -11,10 +11,9 @@
  - `/@<user-alias>` - drops out of all chat and the following messages can only be seen by <user-alias>
  - `/all` - drops out of whisper mode, and back in to all chat.
  
+# Variations
 ###PyÑa Colada Command Correlates
 Syntactically, PyÑa Colada v0.1.5's commands are a bit different. The differences are as follows.
-
-# Variations
 
 ##### Implemented as of PyÑa Colada v0.1.5
  - `/who` - as above

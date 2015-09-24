@@ -14,11 +14,13 @@
 ###PyÑa Colada Command Correlates
 Syntactically, PyÑa Colada v0.1.5's commands are a bit different. The differences are as follows.
 
+# Variations
+
 ##### Implemented as of PyÑa Colada v0.1.5
  - `/who` - as above
  - `/servers` - as above
- - `@<user-alias>` - `\w <user-alias>`
- - `/quit` or `exit` - `\x`
+ - `@<user-alias>` - `/w <user-alias>`
+ - `/quit` or `exit` - `/x`
  - `/listen` - automatic
 
 ##### Not Implemented as of PyÑa Colada v0.1.5

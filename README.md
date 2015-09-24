@@ -44,6 +44,8 @@ There are various types of messages used by Rum. They each have various function
 * **serverlist**: Used to send a full server list from one node to another
 * **serverlistdiff**: Response to `serverlist` type message, sends all servers unique to a node not contained in the `serverlist` message
 * **serverlisthash**: Used to check for descrepancies in server lists between one node and another
+* **ping**: Used to ask a user for an update of their basic information (alias, location, uid)
+* **pingreply**: A response to the ping - contains no body.
 * **authorization**: Milestone 2
 
 #### Message

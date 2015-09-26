@@ -6,7 +6,8 @@ Chat protocol for secure communication over a mesh network over the internet.
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
 [Spiced Gracken v0.1.1](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
-[PyÑa Colada v0.1.3](https://github.com/etkirsch/pyna-colada) (Python 3.4)
+[PyÑa Colada v0.1.3](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
+[EmberClear v0](https://github.com/NullVoxPopuli/emberclear/) (Ember)
 
 ### Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.

@@ -2,12 +2,13 @@
 Chat protocol for secure communication over a mesh network over the internet.
 
 
-## Clients
+## Recognized `mesh-chat` Clients
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
-[Spiced Gracken v0.1.1](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
-[PyÑa Colada v0.1.3](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
-[EmberClear v0](https://github.com/NullVoxPopuli/emberclear/) (Ember)
+* [PyÑa Colada v0.2.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
+* [Spiced Gracken v0.1.1](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
+* [Angular Pale Ale v0](https://github.com/etkirsch/angular-pale-ale) (Angular JS)
+* [EmberClear v0](https://github.com/NullVoxPopuli/emberclear/) (Ember)
 
 ### Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.
@@ -16,7 +17,7 @@ The server is responsible for configuration of authorized servers and handling o
 
 
 ## Mesh-Chat Protocol
-Each message will be a serialized (to JSON) hash.
+Each message will be a serialized JSON hash.
 Every hash must include:
 
     {
@@ -57,7 +58,7 @@ The `message` field in the hash is of variable type. Its type is determined by t
  * **connect**: A json object containing the identifier for the connecting party and a hash of all of its authorized servers
  * **disconnect**: Notifies the meshnet that a user has disconnected from the meshnet
  * **serverlist**: Contains the full server list from an authorized node
- * **serverlisthash**: A hash for checking for differences in serverlists between a connecting node and a connected node
+ * **serverlisthash**: A hash for checking for differences in serverlists between a connecting node and a connected node. This hash should be SHA512
  * **serverlistdiff**: Contains a truncated server list with only unique entities from a connected node to a connecting node
  * **authorization**: Milestone 2
 
@@ -72,3 +73,6 @@ An entry in the `serverlist` and `serverlistdiff` messages must follow the follo
     "publickey": <string> # This user's public key (RSA? undecided at the moment) (static)
 }
 ```
+
+## Encryption
+`mesh-chat` applications should use RSA for encryption and decryption. Applications which do not use RSA will be unable to read or respond coherently.

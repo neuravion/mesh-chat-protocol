@@ -62,7 +62,7 @@ A relayable message looks like this:
   type: 'relay',
   client: '...',
   client_version: '...',
-  time_sent: <UTC DateTime String>,
+  time_sent: '...',
   sender: {
     alias: 'alias',
     location: 'ipv4:port',

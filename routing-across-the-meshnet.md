@@ -38,9 +38,23 @@ Say, Alice and Bob are friends. Alice is already on the mesh network, and Bob wa
 * Bob can now send messages to anyone on the network. 
 
 
-### P2P Messaging
+### P2P Messaging / General Encryption
+
+Messages are encrypted with a combination of AES and RSA.
+
+* The message is encrypted using AES with a randomly generated 256 bit Key and 256 bit IV.
+* Both the Key and the IV are separately encrypted with the RSA public key for the recipient.
+* The RSA-Encrypted Key and IV are prepended to the AES-Encrypted message, and then sent to the destination.
+
+Once the destination recieve the message, that node may attempt to decrypt their message
+* the message must be split in to 3 parts RSA-Encrypted Key, RSA-Encrypted IV, and AES-Encrypted Message
+* The node decrypts the AES Key and AES IV with their RSA private key
+* With the AES Key and AES IV, the message can now de decrypted
+
 
 ### Relaying
+
+
 
 ## Traversing the Network
 TODO ^

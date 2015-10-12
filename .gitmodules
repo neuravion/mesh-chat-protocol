@@ -1,0 +1,6 @@
+[submodule "clients/pyna-colada"]
+	path = clients/pyna-colada
+	url = git@github.com:etkirsch/pyna-colada.git
+[submodule "clients/spiced_gracken"]
+	path = clients/spiced_gracken
+	url = git@github.com:NullVoxPopuli/spiced_gracken.git

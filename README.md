@@ -46,7 +46,6 @@ There are various types of messages used by Rum. They each have various function
 
 * **chat**: A message broadcast to all of a client's active servers
 * **whisper**: A message broadcast to a single active server, e.g. `@evan hello`
-* **connect**: Informs all authorized servers that this client/server pair has come online
 * **disconnect**: Informs all active servers that this client has gone offline
 * **nodelist**: Used to send a full server list from one node to another
 * **nodelistdiff**: Response to `nodelist` type message, sends all servers unique to a node not contained in the `nodelist` message
@@ -60,7 +59,6 @@ The `message` field in the hash is of variable type. Its type is determined by t
 
  * **chat**: A string containing the message body
  * **whisper**: A string containing the message body
- * **connect**: A json object containing the identifier for the connecting party and a hash of all of its authorized servers
  * **disconnect**: Notifies the meshnet that a user has disconnected from the meshnet
  * **nodelist**: Contains the full server list from an authorized node
  * **nodelisthash**: A hash for checking for differences in nodelists between a connecting node and a connected node. This hash should be SHA512
@@ -80,4 +78,4 @@ An entry in the `nodelist` and `nodelistdiff` messages must follow the following
 ```
 
 ## Encryption
-`mesh-chat` applications should use RSA for encryption and decryption. Applications which do not use RSA will be unable to read or respond coherently.
+`mesh-chat` applications should use dual RSA and AES for encryption and decryption. Nodes which are new to the system must generate a set of RSA keys and provide at least one other node with the public key before it can begin participating in the mesh network.

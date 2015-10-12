@@ -71,7 +71,7 @@ A relayable message looks like this:
   message: {
     destination: 'original destination uid',
     message: 'encrypted message for the destination',
-    hops: ['list of uids from', 'each relay']  
+    hops: ['list of uids from', 'each relay', 'order newest, oldest']  
   }
 }
 ```

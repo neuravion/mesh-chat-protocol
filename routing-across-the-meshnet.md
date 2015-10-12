@@ -14,7 +14,7 @@ Each new person will need the following information to be eligible to join the n
 {
   'alias': 'your alias - this can change at any time',
   'location': 'your current ip:port that your mesh chat server is listening on - this can change at any time',
-  'uid': 'your unique identification - this cannot change or you'll have to be re-added to the network.',
+  'uid': 'your unique identification - this cannot change or you will have to be re-added to the network.',
   'publicKey': '-----BEGIN PUBLIC KEY-----\nRSA Public Key\n-----END PUBLIC KEY-----\n'
 }
 ```

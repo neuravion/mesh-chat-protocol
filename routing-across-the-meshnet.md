@@ -54,6 +54,30 @@ Once the destination recieve the message, that node may attempt to decrypt their
 
 ### Relaying
 
+Since each message is encrypted using the destination's public key, if a message is to be relayed, it will need to be wrapped in another message that will tell the intermediary destination to relay to the final destination.
+A relayable message looks like this:
+
+```javascript
+{
+  type: 'relay',
+  client: '...',
+  client_version: '...',
+  time_sent: <UTC DateTime String>,
+  sender: {
+    alias: 'alias',
+    location: 'ipv4:port',
+    uid: '...'
+  },
+  message: {
+    destination: 'original destination uid',
+    message: 'encrypted message for the destination',
+    hops: ['list of uids from', 'each relay']  
+  }
+}
+```
+
+This message will also be encrypted for sending to the next relay node. 
+When the relay message is received by a node, it will be unencrypted, and the node will compare the `destination` `uid` to their own `uid`. If there is a match, they can then also decrypt the original message. If there is no match, the relaying continues, and more uids are appended to the `hops` array.
 
 
 ## Traversing the Network

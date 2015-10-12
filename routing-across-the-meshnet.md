@@ -24,7 +24,7 @@ Each new person will need the following information to be eligible to join the n
 **alias**: this can change at anytime, it is how you will show up in your own chat, as well as everyone else's.  
 **location**: this can change at anytime.  
 **uid**: this cannot change or you will have to be re-added to the network.  
-**publicKey**: this *could* change, but at this time, @NullVoxPopuli and @NeuroTek haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.  
+**publicKey**: this *could* change, but at this time, [@NullVoxPopuli](https://github.com/NullVoxPopuli) and [@etkirsch](https://github.com/etkirsch) haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.  
 
 
 In order to authorize someone to the network, an exchange of the above information must happen.

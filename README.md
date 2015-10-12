@@ -1,6 +1,7 @@
 # mesh-chat
 Chat protocol for secure communication over a mesh network over the internet.
 
+#### Topics / Reference
 [Routing Across the Mesh Network](routing-across-the-meshnet.md)  
 [Message Types](message-types.md)  
 [Server/Node List Sync](server-list-sync.md)  

@@ -79,6 +79,8 @@ A relayable message looks like this:
 This message will also be encrypted for sending to the next relay node. 
 When the relay message is received by a node, it will be unencrypted, and the node will compare the `destination` `uid` to their own `uid`. If there is a match, they can then also decrypt the original message. If there is no match, the relaying continues, and more uids are appended to the `hops` array.
 
+* TODO: think about how to verify that the message was received by the intended recipient. We could use this to help determine when a node has become unstable or untrustworthy.
+
 
 ## Traversing the Network
 TODO ^

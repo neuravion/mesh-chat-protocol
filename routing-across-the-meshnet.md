@@ -19,10 +19,10 @@ Each new person will need the following information to be eligible to join the n
 }
 ```
 
-**alias**: this can change at anytime, it is how you will show up in your own chat, as well as everyone else's.
-**location**: this can change at anytime
-**uid**: this cannot change or you will have to be re-added to the network.
-**publicKey**: this *could* change, but at this time, @NullVoxPopuli and @NeuroTek haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.
+**alias**: this can change at anytime, it is how you will show up in your own chat, as well as everyone else's.  
+**location**: this can change at anytime.  
+**uid**: this cannot change or you will have to be re-added to the network.  
+**publicKey**: this *could* change, but at this time, @NullVoxPopuli and @NeuroTek haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.  
 
 * Note that the above information is formatted as json. Each mesh-chat compatible client should be capable of exporting and importing this type of file.
 

@@ -10,7 +10,7 @@ No intermediary / relay node will be able to read the message to the intended ta
 To gain access to the network, a person must know someone on the network, or someone on the network can recruit people to join. There is no way to just 'connect' to the network and be authorized without personally knowing someone ahead of time. This is to evade the possibility of a man-in-the-middle attack intercepting encryption keys for the whole network.
 
 Each new person will need the following information to be eligible to join the network:
-```json
+```javascript
 {
   'alias': 'your alias - this can change at any time',
   'location': 'your current ip:port that your mesh chat server is listening on - this can change at any time',

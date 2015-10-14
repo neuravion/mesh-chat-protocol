@@ -16,3 +16,5 @@ curl -H "Content-Type: application/json" \
      -d '{"message":"encrypted message"}' \
      http://ip.or.address:3000
 ```
+
+Note that the encrypted message should be the entire json structure defined by the [Message Protocol](https://github.com/neuravion/mesh-chat#mesh-chat-protocol)

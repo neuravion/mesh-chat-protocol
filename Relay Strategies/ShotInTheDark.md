@@ -19,6 +19,5 @@ This is a non-optimal strategy which does not require the mesh network graph to 
 * Can handle non-clientized disconnects without much issue
 
 ## Disadvantages
-* Needs to iterate over every single node in the graph (aka O(N^2)) if a node cannot be reached
-* Does not handle relaying very well
-* Haphazard; nodes are more or less chosen at random
+* Worst case scenario, every node in the graph will be visited. 
+* It is up to each node to keep track of success rates in communicating to other nodes

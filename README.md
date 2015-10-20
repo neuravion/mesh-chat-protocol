@@ -10,10 +10,9 @@ Chat protocol for secure communication over a mesh network over the internet.
 ## Recognized `mesh-chat` Clients
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
-* [PyÑa Colada v0.2.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
-* [Spiced Gracken v0.1.1](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
+* [PyÑa Colada v0.5.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
+* [Spiced Gracken v0.5.0](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
 * [Angular Pale Ale v0](https://github.com/etkirsch/angular-pale-ale) (Angular JS)
-* [EmberClear v0](https://github.com/NullVoxPopuli/emberclear/) (Ember)
 
 ### Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.
@@ -39,20 +38,19 @@ Every hash must include:
       message: <Indeterminant> # Variable type, can be string or json object (see below)
     }
 
-A recieving client deserializes the JSONized hash, and can do whatever with it.
-
+A receiving client deserializes the JSONized hash, and can do whatever with it.
+M
 ### Message Types
 There are various types of messages used by Rum. They each have various functionalities as described below.
 
 * **chat**: A message broadcast to all of a client's active servers
 * **whisper**: A message broadcast to a single active server, e.g. `@evan hello`
 * **disconnect**: Informs all active servers that this client has gone offline
+* **nodelisthash**: Used to check for descrepancies in node lists between one node and another
 * **nodelist**: Used to send a full server list from one node to another
 * **nodelistdiff**: Response to `nodelist` type message, sends all servers unique to a node not contained in the `nodelist` message
-* **nodelisthash**: Used to check for descrepancies in node lists between one node and another
 * **ping**: Used to ask a user for an update of their basic information (alias, location, uid)
 * **pingreply**: A response to the ping - contains no body.
-* **authorization**: Milestone 2
 
 #### Message
 The `message` field in the hash is of variable type. Its type is determined by the `type` field as follows.
@@ -63,7 +61,7 @@ The `message` field in the hash is of variable type. Its type is determined by t
  * **nodelist**: Contains the full server list from an authorized node
  * **nodelisthash**: A hash for checking for differences in nodelists between a connecting node and a connected node. This hash should be SHA512
  * **nodelistdiff**: Contains a truncated server list with only unique entities from a connected node to a connecting node
- * **authorization**: Milestone 2
+
 
 #### Node List Entry
 An entry in the `nodelist` and `nodelistdiff` messages must follow the following format:
@@ -78,4 +76,4 @@ An entry in the `nodelist` and `nodelistdiff` messages must follow the following
 ```
 
 ## Encryption
-`mesh-chat` applications should use dual RSA and AES for encryption and decryption. Nodes which are new to the system must generate a set of RSA keys and provide at least one other node with the public key before it can begin participating in the mesh network.
+`mesh-chat` applications should use dual RSA (PKCS1 v1.5) and AES-256 for encryption and decryption. Nodes which are new to the system must generate a set of RSA keys and provide at least one other node with the public key before it can begin participating in the mesh network.

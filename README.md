@@ -10,9 +10,9 @@ Chat protocol for secure communication over a mesh network over the internet.
 ## Recognized `mesh-chat` Clients
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
-* [PyÑa Colada v0.5.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
-* [Spiced Gracken v0.5.0](https://github.com/NullVoxPopuli/spiced_gracken) (Ruby gem)  
-* [Angular Pale Ale v0](https://github.com/etkirsch/angular-pale-ale) (Angular JS)
+* [PyÑa Colada](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
+* [Spiced Rumby](https://github.com/NullVoxPopuli/spiced_rumby) (Ruby gem)  
+* [Angular Pale Ale](https://github.com/etkirsch/angular-pale-ale) (Angular JS - not yet started)
 
 ### Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.

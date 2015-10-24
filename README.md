@@ -39,41 +39,7 @@ Every hash must include:
     }
 
 A receiving client deserializes the JSONized hash, and can do whatever with it.
-M
-### Message Types
-There are various types of messages used by Rum. They each have various functionalities as described below.
 
-* **chat**: A message broadcast to all of a client's active servers
-* **whisper**: A message broadcast to a single active server, e.g. `@evan hello`
-* **disconnect**: Informs all active servers that this client has gone offline
-* **nodelisthash**: Used to check for descrepancies in node lists between one node and another
-* **nodelist**: Used to send a full server list from one node to another
-* **nodelistdiff**: Response to `nodelist` type message, sends all servers unique to a node not contained in the `nodelist` message
-* **ping**: Used to ask a user for an update of their basic information (alias, location, uid)
-* **pingreply**: A response to the ping - contains no body.
-
-#### Message
-The `message` field in the hash is of variable type. Its type is determined by the `type` field as follows.
-
- * **chat**: A string containing the message body
- * **whisper**: A string containing the message body
- * **disconnect**: Notifies the meshnet that a user has disconnected from the meshnet
- * **nodelist**: Contains the full server list from an authorized node
- * **nodelisthash**: A hash for checking for differences in nodelists between a connecting node and a connected node. This hash should be SHA512
- * **nodelistdiff**: Contains a truncated server list with only unique entities from a connected node to a connecting node
-
-
-#### Node List Entry
-An entry in the `nodelist` and `nodelistdiff` messages must follow the following format:
-
-```
-{
-    "alias": <string>, # The user's current alias (transient)
-    "location": <string>:<num>, # the user's current ip address and port (transient)
-    "uid": <string>, # the user's identifier (static)
-    "publickey": <string> # This user's public key (RSA? undecided at the moment) (static)
-}
-```
 
 ## Encryption
 `mesh-chat` applications should use dual RSA (PKCS1 v1.5) and AES-256 for encryption and decryption. Nodes which are new to the system must generate a set of RSA keys and provide at least one other node with the public key before it can begin participating in the mesh network.

@@ -17,3 +17,40 @@ opt server list hashes differ
     ClientB->ClientA: Sends server list diff to ClientA
 end
 ```
+
+
+### Format
+
+The format for each of the sync messages' payloads are as follows:
+
+#### nodelist
+
+This should be a list of all known nodes
+
+```
+[
+  { "alias": "etk", "location": "10.10...", "uid": "abcd...", "publickey"  },
+  { "alias": "nvp", "location": "10.10...", "uid": "abcd...", "publickey"  },
+  { "alias": "someotherguy", "location": "10.10...", "uid": "abcd...", "publickey"  }
+  ...
+]
+```
+
+#### nodelistdiff
+
+After receiving a node list, this should be the list of nodes that are not included in the list received
+
+```
+[
+  { "alias": "anotherbro", "location": "10.10...", "uid": "abcd...", "publickey"  }
+  ...
+]
+```
+
+#### nodelisthash
+
+This should be all your nodes hashed with `SHA-512`
+
+```
+suaoehtiud0aoe89u6an4gchiypnsoe98uaoefnucgude...
+```

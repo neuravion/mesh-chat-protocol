@@ -54,3 +54,11 @@ This should be all your nodes hashed with `SHA-512`
 ```
 suaoehtiud0aoe89u6an4gchiypnsoe98uaoefnucgude...
 ```
+
+## Common Mistakes
+
+- Infinite loop of node list sending
+  -  Likely that the node list hashes are never the same
+    -  This could be due to formatting differences in the singular json representation of a node
+    -  The nodes could be in a different order
+    -  The nodes might not be diffed and added correctly upon receiving

@@ -15,7 +15,7 @@ Each new person will need the following information to be eligible to join the n
   'alias': 'your alias',
   'location': '10.10.12.48:2008',
   'uid': 'your unique identification',
-  'publicKey': '-----BEGIN PUBLIC KEY-----\nRSA Public Key\n-----END PUBLIC KEY-----\n'
+  'publickey': '-----BEGIN PUBLIC KEY-----\nRSA Public Key\n-----END PUBLIC KEY-----\n'
 }
 ```
 * Note that the above information is formatted as json. Each mesh-chat compatible client should be capable of exporting and importing this type of file.
@@ -24,7 +24,7 @@ Each new person will need the following information to be eligible to join the n
 **alias**: this can change at anytime, it is how you will show up in your own chat, as well as everyone else's.  
 **location**: this can change at anytime.  
 **uid**: this cannot change or you will have to be re-added to the network.  
-**publicKey**: this *could* change, but at this time, [@NullVoxPopuli](https://github.com/NullVoxPopuli) and [@etkirsch](https://github.com/etkirsch) haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.  
+**publickey**: this *could* change, but at this time, [@NullVoxPopuli](https://github.com/NullVoxPopuli) and [@etkirsch](https://github.com/etkirsch) haven't talked about how to handle that quite yet. The PublicKey is how other nodes will encrypt information that only you can decrypt.  
 
 
 In order to authorize someone to the network, an exchange of the above information must happen.

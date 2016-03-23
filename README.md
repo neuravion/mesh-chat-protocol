@@ -1,4 +1,6 @@
 # mesh-chat
+
+[![Join the chat at https://gitter.im/neuravion/mesh-chat](https://badges.gitter.im/neuravion/mesh-chat.svg)](https://gitter.im/neuravion/mesh-chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Chat protocol for secure communication over a mesh network over the internet.
 
 #### Topics / Reference

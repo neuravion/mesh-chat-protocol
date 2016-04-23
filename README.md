@@ -15,6 +15,11 @@ Clients have been built in multiple languages. Interpretations between these cli
 * [PyÑa Colada](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
 * [Spiced Rumby](https://github.com/NullVoxPopuli/spiced_rumby) (Ruby gem)  
 * [Angular Pale Ale](https://github.com/etkirsch/angular-pale-ale) (Angular JS - not yet started)
+ 
+## `mesh-chat` Relay
+There is currently only one server-side relay. All clients can connect to this server. Many instances of this server across the internet are vital to the survival of a mesh-network and allow p2p communication across the globe.
+
+* [mesh-relay](https://github.com/NullVoxPopuli/mesh-relay) (Ruby on Rails 5)
 
 ### Responsibility Breakdown
 The client is responsible for sending all messages to servers. It is only permitted to send messages on its own behalf, and not for any other party. It will keep track of the active list of authorized servers.

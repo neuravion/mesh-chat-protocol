@@ -1,7 +1,7 @@
 # Message Types
 
 ### Message Types
-There are various types of messages used by Rum. They each have various functionalities as described below.
+There are various types of messages used in mesh-chat applications. They each have various functionalities as described below.
 
 * **chat**: A message broadcast to all of a client's active servers
 * **whisper**: A message broadcast to a single active server, e.g. `@evan hello`

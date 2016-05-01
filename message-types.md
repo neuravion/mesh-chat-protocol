@@ -4,6 +4,7 @@
 There are various types of messages used in mesh-chat applications. They each have various functionalities as described below.
 
 * **chat**: A message broadcast to all of a client's active servers
+* **emote**: A specialized chat message which is broadcasted to all of a client's active servers
 * **whisper**: A message broadcast to a single active server, e.g. `@evan hello`
 * **disconnect**: Informs all active servers that this client has gone offline
 * **nodelisthash**: Used to check for discrepancies in node lists between one node and another

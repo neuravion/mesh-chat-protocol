@@ -12,7 +12,8 @@ Chat protocol for secure communication over a mesh network over the internet.
 ## Recognized `mesh-chat` Clients
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
-* [PyÑa Colada](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
+* [Otra Vez Gose v0.0.0](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
+* [PyÑa Colada v0.9.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
 * [Spiced Rumby](https://github.com/NullVoxPopuli/spiced_rumby) (Ruby gem)  
 * [Angular Pale Ale](https://github.com/etkirsch/angular-pale-ale) (Angular JS - not yet started)
  

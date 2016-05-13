@@ -12,10 +12,13 @@ Chat protocol for secure communication over a mesh network over the internet.
 ## Recognized `mesh-chat` Clients
 Clients have been built in multiple languages. Interpretations between these clients are very unique, but the `mesh-chat` protocol is always consistent.
 
-* [Otra Vez Gose v0.0.0](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
 * [PyÑa Colada v0.9.0](https://github.com/etkirsch/pyna-colada) (Python 3.4)  
-* [Spiced Rumby](https://github.com/NullVoxPopuli/spiced_rumby) (Ruby gem)  
-* [Angular Pale Ale](https://github.com/etkirsch/angular-pale-ale) (Angular JS - not yet started)
+* [Spiced Rumby](https://github.com/NullVoxPopuli/spiced_rumby) (Ruby 2.3), based on [MeshChat Core](https://github.com/NullVoxPopuli/meshchat) (Ruby 2.3)
+
+## Planned `mesh-chat` Clients
+* [Otra Vez Gose](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
+* [Untitled NodeJS client](https://github.com/ecollis/mesh-chat-node) (NodeJS)
+* [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 2.5)
  
 ## `mesh-chat` Relay
 There is currently only one server-side relay. All clients can connect to this server. Many instances of this server across the internet are vital to the survival of a mesh-network and allow p2p communication across the globe.

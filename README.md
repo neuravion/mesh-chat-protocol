@@ -19,7 +19,7 @@ Clients have been built in multiple languages. Interpretations between these cli
 * [Otra Vez Gose](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
 * [Untitled NodeJS client](https://github.com/ecollis/mesh-chat-node) (NodeJS)
 * [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 2.5)
- 
+
 ## `mesh-chat` Relay
 There is currently only one server-side relay. All clients can connect to this server. Many instances of this server across the internet are vital to the survival of a mesh-network and allow p2p communication across the globe.
 
@@ -52,4 +52,16 @@ A receiving client deserializes the JSONized hash, and can do whatever with it.
 
 
 ## Encryption
-`mesh-chat` applications should use dual RSA (PKCS1 v1.5) and AES-512 for encryption and decryption. Nodes which are new to the system must generate a set of RSA keys and provide at least one other node with the public key before it can begin participating in the mesh network.
+`mesh-chat` applications should use the NaCl library's public key encryption algorithms. Nodes which are new to the system must generate a public/private key pair, and have imported one other node's identity before it can begin participating in the mesh network.
+
+Note that NaCl is an opinionated crytography library whos public key encryption consists of
+
+Encryption: XSalsa20 stream cipher
+Authentication: Poly1305 MAC
+Public Keys: Curve25519 high-speed elliptic curve cryptography
+
+See the [RbNaCl public key encryption](https://github.com/cryptosphere/rbnacl/wiki/Public-Key-Encryption) overview for details, explanation and usage.
+
+- [More Information on NaCl](http://nacl.cr.yp.to/)
+- [C Implementation](https://github.com/jedisct1/libsodium)
+- [Ruby Bindings](https://github.com/cryptosphere/rbnacl)

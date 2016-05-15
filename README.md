@@ -17,7 +17,7 @@ Clients have been built in multiple languages. Interpretations between these cli
 
 ## Planned `mesh-chat` Clients
 * [Otra Vez Gose](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
-* [Untitled NodeJS client](https://github.com/ecollis/mesh-chat-node) (NodeJS)
+* [Untitled NodeJS client](https://github.com/ecollis6/mesh-chat-node) (NodeJS)
 * [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 2.5)
 
 ## `mesh-chat` Relay

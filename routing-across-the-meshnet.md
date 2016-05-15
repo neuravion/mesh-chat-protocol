@@ -15,7 +15,7 @@ Each new person will need the following information to be eligible to join the n
   'alias': 'your alias',
   'location': '10.10.12.48:2008',
   'uid': 'your unique identification',
-  'publickey': '-----BEGIN PUBLIC KEY-----\nRSA Public Key\n-----END PUBLIC KEY-----\n'
+  'publickey': '...'
 }
 ```
 * Note that the above information is formatted as json. Each mesh-chat compatible client should be capable of exporting and importing this type of file.
@@ -33,23 +33,9 @@ Say, Alice and Bob are friends. Alice is already on the mesh network, and Bob wa
 * Alice and Bob both export their own identity json files.
 * Alice and Bob exchange their identity json files. Bob has Alice's identification file, and vice-a-versa.
 * Both Alice and Bob import their friend's identity.
-* Either Bob OR Alice may connect to eachother -- at this point it doesnt't matter who connects to who, as they are both authenticated with one another. 
+* Either Bob OR Alice may connect to eachother -- at this point it doesnt't matter who connects to who, as they are both authenticated with one another.
 * Once a connection is made, Alice will send Bob a list of everyone she can communicate with (node information about the whole network).
-* Bob can now send messages to anyone on the network. 
-
-
-### P2P Messaging / General Encryption
-
-Messages are encrypted with a combination of AES and RSA.
-
-* The message is encrypted using AES with a randomly generated 256 bit Key and 256 bit IV.
-* Both the Key and the IV are separately encrypted with the RSA public key for the recipient.
-* The RSA-Encrypted Key and IV are prepended to the AES-Encrypted message, and then sent to the destination.
-
-Once the destination recieve the message, that node may attempt to decrypt their message
-* the message must be split in to 3 parts RSA-Encrypted Key, RSA-Encrypted IV, and AES-Encrypted Message
-* The node decrypts the AES Key and AES IV with their RSA private key
-* With the AES Key and AES IV, the message can now de decrypted
+* Bob can now send messages to anyone on the network.
 
 
 ### Relaying
@@ -76,7 +62,7 @@ A relayable message looks like this:
 }
 ```
 
-This message will also be encrypted for sending to the next relay node. 
+This message will also be encrypted for sending to the next relay node.
 When the relay message is received by a node, it will be unencrypted, and the node will compare the `destination` `uid` to their own `uid`. If there is a match, they can then also decrypt the original message. If there is no match, the relaying continues, and more uids are appended to the `hops` array.
 
 * TODO: think about how to verify that the message was received by the intended recipient. We could use this to help determine when a node has become unstable or untrustworthy.

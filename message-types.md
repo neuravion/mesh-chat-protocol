@@ -34,6 +34,6 @@ An entry in the `nodelist` and `nodelistdiff` messages must follow the following
     "alias": <string>, # The user's current alias (transient)
     "location": <string>:<num>, # the user's current ip address and port (transient)
     "uid": <string>, # the user's identifier (static)
-    "publickey": <string> # This user's public key (RSA? undecided at the moment) (static)
+    "publickey": <string> # This user's public key (static)
 }
 ```

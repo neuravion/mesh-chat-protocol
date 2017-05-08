@@ -19,7 +19,7 @@ Clients have been built in multiple languages. Interpretations between these cli
 * [Otra Vez Gose](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
 * [Untitled NodeJS client](https://github.com/ecollis/mesh-chat-node) (NodeJS)
 * [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 2.5)
- 
+
 ## `mesh-chat` Relay
 There is currently only one server-side relay. All clients can connect to this server. Many instances of this server across the internet are vital to the survival of a mesh-network and allow p2p communication across the globe.
 
@@ -37,7 +37,9 @@ Every hash must include:
 
     {
       type: <MessageClassName>, # This will tell each client how to read the rest of the keys
-      client: <String>, # name of the client that sent the message
+      id: <String>,             # unique, randomly generated id for other messages to reference
+      replied_to_id: <Strong>,  # reference to a previous message for clients to optionally group threads
+      client: <String>,         # name of the client that sent the message
       client_version: <String>, # version of the client that sent the message
       time_sent: <UTC DateTime String>, # time at the packaging of this message
       sender: {

@@ -18,7 +18,7 @@ Clients have been built in multiple languages. Interpretations between these cli
 ## Planned `mesh-chat` Clients
 * [Otra Vez Gose](https://github.com/etkirsch/otra-vez) (Go 1.6.2)
 * [Mule](https://github.com/ecollis6/mule) (Node.js)
-* [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 2.5)
+* [Emberclear](https://github.com/nullvoxpopuli/emberclear) (Ember 3.17)
 
 ## `mesh-chat` Relay
 There is currently only one server-side relay. All clients can connect to this server. Many instances of this server across the internet are vital to the survival of a mesh-network and allow p2p communication across the globe.
